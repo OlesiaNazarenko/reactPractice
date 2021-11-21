@@ -1,15 +1,19 @@
 import { useState } from 'react';
+import styled from 'styled-components';
 import './App.css';
 import MainPage from '../_pages/MainPage';
 import TransactionPage from '../_pages/TransactionPage';
-
+const AppWrapper = styled.div`
+  background: aliceblue;
+`;
 export default function App() {
   const [activePage, setactivePage] = useState('main');
   const toggleActivePage = (activePage = 'main') => {
-    setactivePage({ activePage });
+    setactivePage(activePage);
   };
+
   return (
-    <div className="App">
+    <AppWrapper>
       {activePage === 'main' && <MainPage openActivePage={toggleActivePage} />}
       {activePage === 'costs' && (
         <TransactionPage
@@ -24,7 +28,7 @@ export default function App() {
         />
       )}
       {activePage === 'balance' && <h1>Balance</h1>}
-    </div>
+    </AppWrapper>
   );
 }
 
