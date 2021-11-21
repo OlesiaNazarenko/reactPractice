@@ -1,0 +1,15 @@
+.btn{
+border:none;
+font-size: 24px;
+padding: 10px 15px;
+background-color: lemonchiffon;
+border-radius: 5px;
+cursor: pointer;
+
+}
+.btn + .btn{
+    margin-left:10px;
+}
+.btn:active{
+    transform: scale(0.9);
+}
