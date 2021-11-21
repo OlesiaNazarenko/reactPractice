@@ -7,11 +7,13 @@ import {
   balanceInfoOtions,
 } from '../../assets/options/mainInfoOptions.json';
 import StatisticButtons from '../statisticsButtons/statisticButtons';
+import SolidTitle from 'components/Titles/SolidTitle';
 
 const MainPage = ({ openActivePage }) => {
   return (
     <>
-      <h1>Журнал расходов</h1>
+      {/* <h1>Журнал расходов</h1> */}
+      <SolidTitle text="Журнал расходов" />
       <MainInfo
         activePage="costs"
         openActivePage={openActivePage}
